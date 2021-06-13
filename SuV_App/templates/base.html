@@ -1,0 +1,171 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="{% static 'css/googleapis.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+
+    <!-- Estilização do Sites -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/select2.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+    <!-- FAZ DESCER A BARRA DO MENU -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- Título do site -->
+    <title>{% block title %}SuV App{% endblock title %}</title>
+</head>
+
+<body>
+    <!-- MUDANÇAS FEITAS HOJE 07/06/2021 -->
+
+    <!-- INICIO: Bloco do Bootstrap a ser incluido -->
+    <nav class="navbar navbar-expand-lg navbar-fixed-top bg-dark">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">SuV_App</a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05"
+                    aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            {% if user.is_authenticated %}
+            <div class="collapse navbar-collapse" id="navbarsExample05">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Menu</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown05">
+                            <a class="dropdown-item" href="{% url 'patients:list_patients' %}">Pacientes</a>
+                            <a class="dropdown-item" href="{% url 'employees:list_employees' %}">Empregados</a>
+                            <a class="dropdown-item" href="{% url 'vaccines:list_vaccines' %}">Vacinas</a>
+                            <a class="dropdown-item" href="{% url 'categories:list_categories' %}">Categorias</a>
+                            <a class="dropdown-item" href="{% url 'posto:list_postos' %}">Postos</a>
+                        </div>
+                    </li>
+                </ul>
+                <form action="{% url 'patients:search_patients' %}" method="GET" class="form-inline my-2 my-md-0"
+                    style="margin-right: 10px">
+                    <input class="form-control" name="query" type="text" placeholder="Sobrenome do paciente"
+                        aria-label="Buscar" style="margin-right: 10px">
+                    <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Buscar</button>
+                </form>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false">{{ user.get_full_name|default:user.username }}</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown05">
+                            <a class="dropdown-item"
+                                href="{% url 'accounts:user_change_information' user.username %}">Conta</a>
+                            <a class="dropdown-item" href="{% url 'accounts:user_change_password' %}">Trocar senha</a>
+                            <a class="dropdown-item" href="{% url 'accounts:user_logout' %}">Sair</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            {% endif %}
+
+    </nav>
+    <!-- FIM: Bloco do Bootstrap a ser incluido -->
+
+    <!-- Inicio do bloco de front end página principal do sistema -->
+    <div id="headerwrap">
+        <div class="container">
+            <div class="row centered">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h1>Não deixe para <b>AMANHÃ</b></h1>
+                    <h2>Vacine-se HOJE!</h2>
+                </div>
+            </div>
+            <!-- row -->
+        </div>
+        <!-- container -->
+    </div>
+    <!-- headerwrap -->
+
+    <div class="container w">
+        <div class="row centered">
+            <br><br>
+            <div class="col-lg-4">
+                <span>🤷</span>
+                <h4>Sobre nós</h4>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                    alteration in
+                    some form, by injected humour, or randomised words which don't look even believable.</p>
+            </div>
+            <!-- col-lg-4 -->
+
+            <div class="col-lg-4">
+                <span>📇</span>
+                <h4>Contato</h4>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                    alteration in
+                    some form, by injected humour, or randomised words which don't look even believable.</p>
+            </div>
+            <!-- col-lg-4 -->
+
+            <div class="col-lg-4">
+                <span>🛑</span>
+                <h4>Sign in / Sign up</h4>
+                <p>Para fazer login no sistema, basta clicar no botão "Sign in" e caso seja o seu primeiro acesso,
+                    basta clicar no botão "Sign up" que você será redirecionado a página para cadastro de seus dados.
+                </p>
+                <!-- botão de sign in -->
+                <button type="button" class="btn btn-dark"><a class="navbar-brand" href="{% url 'accounts:user_login' %}">Sign in</a></button>
+                <!-- botão de sign up -->
+                <button type="button" class="btn btn-dark"><a class="navbar-brand" href="{% url 'accounts:add_user' %}">Sign up</a></button>
+            </div>
+            <!-- col-lg-4 -->
+        </div>
+        <!-- row -->
+        <br>
+        <br>
+    </div>
+
+    <!-- Fim do bloco de front end página principal do sistema -->
+
+    {% block body %}
+
+    {% endblock body %}
+
+
+    <!-- container -->
+    <div id="copyrights">
+        <div class="container">
+            <p>
+                &copy; Copyrights <strong>Spot</strong>. All Rights Reserved
+            </p>
+            <div class="credits">
+                <!--
+              You are NOT allowed to delete the credit link to TemplateMag with free version.
+              You can delete the credit link only if you bought the pro version.
+              Buy the pro version with working PHP/AJAX contact form: https://templatemag.com/spot-bootstrap-freelance-template/
+              Licensing information: https://templatemag.com/license/
+            -->
+                Created with Spot template by <a href="https://templatemag.com/">TemplateMag</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/select2.min.js' %}"></script>
+    <script src="{% static 'js/jquery.mask.min.js' %}"></script>
+    <script src="{% static 'js/jquery-ui.js' %}"></script>
+</body>
+
+</html>
