@@ -1,0 +1,15 @@
+apps/accounts/__pycache__/*
+apps/accounts/migrations/*
+apps/categories/__pycache__/*
+apps/categories/migrations/*
+apps/core/__pycache__/*
+apps/core/migrations/*
+apps/employees/__pycache__/*
+apps/employees/migrations/*
+apps/patients/__pycache__/*
+apps/patients/migrations/*
+apps/posto/__pycache__/*
+apps/posto/migrations/*
+apps/vaccines/__pycache__/*
+apps/vaccines/migrations/*
+SuV_App/__pycache__/*
