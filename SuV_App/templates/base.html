@@ -124,10 +124,14 @@
                 <p>Para fazer login no sistema, basta clicar no botão "Sign in" e caso seja o seu primeiro acesso,
                     basta clicar no botão "Sign up" que você será redirecionado a página para cadastro de seus dados.
                 </p>
-                <!-- botão de sign in -->
-                <button type="button" class="btn btn-dark"><a class="navbar-brand" href="{% url 'accounts:user_login' %}">Sign in</a></button>
-                <!-- botão de sign up -->
-                <button type="button" class="btn btn-dark"><a class="navbar-brand" href="{% url 'accounts:add_user' %}">Sign up</a></button>
+                <div>
+                    <!-- botão de sign in -->
+                    <button type="button" class="btn btn-dark"><a class="navbar-brand"
+                            href="{% url 'accounts:user_login' %}">Sign in</a></button>
+                    <!-- botão de sign up -->
+                    <button type="button" class="btn btn-dark"><a class="navbar-brand"
+                            href="{% url 'accounts:add_user' %}">Sign up</a></button>
+                </div>
             </div>
             <!-- col-lg-4 -->
         </div>
