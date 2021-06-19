@@ -48,6 +48,7 @@ def delete_patient(request, id_patient):
 def search_patients(request):
     template_name = 'patients/list_patients.html'
     query = request.GET.get('query')
+    #ATENÇÃO ->>>>> ESTÁ PESQUISANDO PELO SOBRENOME
     patients = Patient.objects.filter(last_name__icontains=query)
     context = {
         'patients': patients
