@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
     <!-- Título do site -->
-    <title>{% block title %}SuV App{% endblock title %}</title>
+    <title>{% block title %}💉SuV App{% endblock title %}</title>
 </head>
 
 <body>
@@ -35,7 +35,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">SuV_App</a>
+                <a class="navbar-brand" href="/">💉SuV_App</a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05"
                     aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
@@ -78,7 +78,6 @@
                 </ul>
             </div>
             {% endif %}
-
     </nav>
     <!-- FIM: Bloco do Bootstrap a ser incluido -->
 
@@ -117,7 +116,6 @@
                     some form, by injected humour, or randomised words which don't look even believable.</p>
             </div>
             <!-- col-lg-4 -->
-
             <div class="col-lg-4">
                 <span>🛑</span>
                 <h4>Sign in / Sign up</h4>
@@ -126,10 +124,10 @@
                 </p>
                 <div>
                     <!-- botão de sign in -->
-                    <button type="button" class="btn btn-dark"><a class="navbar-brand"
+                    <button type="button" class="btn btn-dark botao-que-vai-sumir"><a class="navbar-brand"
                             href="{% url 'accounts:user_login' %}">Sign in</a></button>
                     <!-- botão de sign up -->
-                    <button type="button" class="btn btn-dark"><a class="navbar-brand"
+                    <button type="button" class="btn btn-dark botao-que-vai-sumir"><a class="navbar-brand"
                             href="{% url 'accounts:add_user' %}">Sign up</a></button>
                 </div>
             </div>
