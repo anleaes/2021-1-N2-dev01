@@ -82,6 +82,7 @@
     <!-- FIM: Bloco do Bootstrap a ser incluido -->
 
     <!-- Inicio do bloco de front end página principal do sistema -->
+    
     <div id="headerwrap">
         <div class="container">
             <div class="row centered">
@@ -116,7 +117,9 @@
                     some form, by injected humour, or randomised words which don't look even believable.</p>
             </div>
             <!-- col-lg-4 -->
-
+            <!-- esse if faz sumir o botão de login após logar -->
+            {% if user.is_authenticated %}
+            {% else %}
             <div class="col-lg-4">
                 <span>🛑</span>
                 <h4>Sign in / Sign up</h4>
@@ -132,6 +135,7 @@
                             href="{% url 'accounts:add_user' %}">Sign up</a></button>
                 </div>
             </div>
+            {% endif %}
             <!-- col-lg-4 -->
         </div>
         <!-- row -->
