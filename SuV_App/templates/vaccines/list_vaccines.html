@@ -42,6 +42,7 @@ Lista de Produtos - {{ block.super }}
                             <td>{{ vaccine.name }}</td>
                             <td>{{ vaccine.description }}</td>
                             <td>{{ vaccine.date_fabrication }}</td>
+                            <td>{{ vaccine.expiration_date }}</td>
                             <td>
                                 {% if vaccine.is_active == True %}
                                     Ativo

@@ -8,7 +8,7 @@ def add_vaccine(request):
     template_name = 'vaccines/add_vaccines.html'
     context = {}
     if request.method == 'POST':
-        form = VaccinesForm(request.POST)
+        form = VaccinesForm(request.POST, request.FILES)
         if form.is_valid():
             f = form.save(commit=False)
             f.save()
@@ -31,7 +31,7 @@ def edit_vaccine(request, id_vaccine):
     context ={}
     vaccine = get_object_or_404(Vaccine, id=id_vaccine)
     if request.method == 'POST':
-        form = VaccinesForm(request.POST, instance=vaccine)
+        form = VaccinesForm(request.POST, request.FILES,  instance=vaccine)
         if form.is_valid():
             form.save()
             return redirect('vaccines:list_vaccines')
