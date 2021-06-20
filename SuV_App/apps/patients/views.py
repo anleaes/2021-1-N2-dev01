@@ -46,10 +46,11 @@ def delete_patient(request, id_patient):
     return redirect('patients:list_patients')
 
 def search_patients(request):
-    template_name = 'paients/list_patients.html'
+    template_name = 'patients/list_patients.html'
     query = request.GET.get('query')
+    #ATENÇÃO ->>>>> ESTÁ PESQUISANDO PELO SOBRENOME
     patients = Patient.objects.filter(last_name__icontains=query)
     context = {
-        'clients': patients,
+        'patients': patients
     }
     return render(request,template_name, context) 
