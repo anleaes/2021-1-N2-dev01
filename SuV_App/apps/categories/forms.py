@@ -5,4 +5,4 @@ class CategoryForm(forms.ModelForm):
 
     class Meta:
         model = Category
-        exclude = ()
+        exclude = ('created_on' , 'updated_on',)
