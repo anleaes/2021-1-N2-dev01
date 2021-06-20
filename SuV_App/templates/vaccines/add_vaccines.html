@@ -4,23 +4,24 @@
 
 {% block title %}
 
-    Adicionar Vacina - {{ block.super }}
+Adicionar Vacina - {{ block.super }}
 
 {% endblock title %}
 
 {% block body %}
 
-    <div class="container">
-        <br />
+<div class="container">
+    <br />
     <h5><b>Cadastro de Vacina</b></h5>
-        <div class="row">
-            <div class ="col-md-12">
-                <!-- <form action="" method="POST" -->
-                <form action="" method="POST" enctype="multipart/form-data"> <!-- Substituido -->
+    <div class="row">
+        <div class="col-md-12">
+            <!-- <form action="" method="POST" -->
+            <form action="" method="POST" enctype="multipart/form-data">
+                <!-- Substituido -->
                 {% csrf_token %}
                 <div class="form-group">
-                   <label for="{{ form.name.id_for_label }}">Nome</label>
-                   {{ form.name|add_class:"form-control" }}
+                    <label for="{{ form.name.id_for_label }}">Nome</label>
+                    {{ form.name|add_class:"form-control" }}
                 </div>
                 <div class="form-group">
                     <label for="{{ form.description.id_for_label }}">Descricao</label>
@@ -40,18 +41,36 @@
                 </div>
                 <!-- Adicionado INICIO -->
                 <div class="form-group">
-                    <label for="{{ form.photo.id_for_label }}">Foto</label>
+                    <label class="control-label" for="{{ form.photo.id_for_label }}">Foto</label>
                     {{ form.photo|add_class:"form-control-file" }}
+                    <input id="input-b5" name="input-b5[]" type="file" multiple>
+                    <script>
+                        $(document).ready(function () {
+                            $("#input-b5").fileinput({
+                                showCaption: false,
+                                dropZoneEnabled: false
+                            });
+                        });
+                    </script>
                 </div>
                 <div class="form-group">
-                    <label for="{{ form.doc.id_for_label }}">Documentos</label>
+                    <label class="control-label" for="{{ form.doc.id_for_label }}">Documentos</label>
                     {{ form.doc|add_class:"form-control-file" }}
+                    <input id="input-b5" name="input-b5[]" type="file" multiple>
+                    <script>
+                        $(document).ready(function () {
+                            $("#input-b5").fileinput({
+                                showCaption: false,
+                                dropZoneEnabled: false
+                            });
+                        });
+                    </script>
                 </div>
                 <!-- Adicionado FIM -->
-                    <button type="submit" class="btn btn-primary">Salvar</button>       
-                </form>
-            </div>
+                <button type="submit" class="btn btn-primary">Salvar</button>
+            </form>
         </div>
     </div>
+</div>
 
 {% endblock body %}
