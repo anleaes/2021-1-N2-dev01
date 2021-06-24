@@ -33,6 +33,14 @@
                   <label for="{{ form.employee.id_for_label }}">Funcionário</label>
                   {{ form.employee|add_class:"form-control" }}
                 </div>
+                <div class="form-group">
+                    <label for="{{ form.date_vaccination.id_for_label }}">Data</label>
+                    {{ form.date_vaccination|add_class:"form-control" }}
+                </div>
+                <div class="form-group">
+                <label for="{{ form.observation.id_for_label }}">Observações</label>
+                {{ form.observation|add_class:"form-control" }}
+                </div>
                     <button type="submit" class="btn btn-primary">Salvar</button>       
                 </form>
             </div>
