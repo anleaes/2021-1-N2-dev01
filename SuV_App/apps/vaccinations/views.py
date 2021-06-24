@@ -32,7 +32,7 @@ def edit_vaccination(request, id_vaccination):
     context ={}
     vaccination = get_object_or_404(Vaccination, id=id_vaccination)
     if request.method == 'POST':
-        form = vaccinationForm(request.POST, instance=vaccination)
+        form = VaccinationForm(request.POST, instance=vaccination)
         if form.is_valid():
             form.save()
             return redirect('vaccinations:list_vaccinations')
