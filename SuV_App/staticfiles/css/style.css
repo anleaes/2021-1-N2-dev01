@@ -79,7 +79,7 @@ button{
 }
 
 .navbar-inverse .navbar-nav>.active>a {
-  background: #ff7878
+  background: #71a8f0
 }
 
 .navbar-inverse .navbar-brand {
@@ -90,7 +90,7 @@ button{
 }
 
 .navbar-inverse .navbar-brand i {
-  color: #ff7878;
+  color: #71a8f0;
   font-size: 22px;
   letter-spacing: 1px;
 }
@@ -191,7 +191,7 @@ button{
 /* Red Wrap */
 
 #r {
-  background: #ff7878;
+  background: #71a8f0;
   padding-top: 35px;
   padding-bottom: 35px;
 }
@@ -237,7 +237,7 @@ button{
 }
 
 #f i:hover {
-  color: #ff7878;
+  color: #71a8f0;
 }
 
 /****** SECTIONS *****/
@@ -251,7 +251,7 @@ button{
 }
 
 .w i {
-  color: #ff7878;
+  color: #71a8f0;
   font-size: 30px;
 }
 
@@ -273,7 +273,7 @@ button{
 }
 
 .desc i {
-  color: #ff7878;
+  color: #71a8f0;
   font-size: 12px;
   padding: 5px;
 }
@@ -398,7 +398,7 @@ button{
 }
 
 .pricing-option .pricing-signup:hover {
-  background: #ff7878;
+  background: #71a8f0;
 }
 
 /* Contact Form */
@@ -425,7 +425,7 @@ button{
 }
 
 .contact-form .form-send button  {
-  background: #d9534f;
+  background: #71a8f0;
   border: 0;
   padding: 10px 30px;
   color: #fff;
@@ -434,7 +434,7 @@ button{
 }
 
 .contact-form .form-send button:hover {
-  background: #e65f5b;
+  background: #5bbfe6;
 }
 
 .contact-form .validate {
@@ -493,7 +493,7 @@ button{
 .contact-form .error-message {
   display: none;
   color: #fff;
-  background: #ed3c0d;
+  background: #0dd3ed;
   text-align: center;
   padding: 15px;
   font-weight: 600;
