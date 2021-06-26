@@ -38,7 +38,7 @@ p {
 /* Links */
 
 a {
-  color: #f85c37;
+  color: #8ccbf0;
   word-wrap: break-word;
   transition: color 0.1s ease-in, background 0.1s ease-in;
 }
@@ -439,7 +439,7 @@ button{
 
 .contact-form .validate {
   display: none;
-  color: red;
+  color: rgb(5, 29, 107);
   margin: 0 0 15px 0;
   font-weight: 400;
   font-size: 13px;

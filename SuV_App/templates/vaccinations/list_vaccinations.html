@@ -1,0 +1,56 @@
+{% extends 'index.html' %}
+
+{% block title %}
+
+Lista de Vacinações - {{ block.super }}
+
+{% endblock title %}
+
+{% block body %}
+
+<div class="container">
+    <br />
+    <h5><b>Lista de Vacinações</b></h5>
+    <div class="row">
+        <div class="col-md-12">
+            <br />
+            <a href="{% url 'vaccinations:add_vaccination' %}">Cadastro de nova aplicação</a>
+            <br />
+            <br />
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Paciente</th>
+                        <th scope="col">Vacina</th>
+                        <th scope="col">Posto</th>
+                        <th scope="col">Funcionário</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for vaccination in vaccinations %}
+                    <tr>
+                        <th scope="row">{{ vaccination.id }}</th>
+                        <td>{{ vaccination.patient }}</td>
+                        <td>{{ vaccination.vaccine }}</td>
+                        <td>{{ vaccination.posto }}</td>
+                        <td>{{ vaccination.employee }}</td>
+                        <td>
+                            <a href="{% url 'vaccinations:edit_vaccination' vaccination.id %}"
+                                class="btn btn-primary btn-sm">Editar</a>
+                        </td>
+                        <td>
+                            <a href="{% url 'vaccinations:delete_vaccination' vaccination.id %}"
+                                class="btn btn-danger btn-sm ">Excluir</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}

@@ -54,6 +54,7 @@
                             <a class="dropdown-item" href="{% url 'vaccines:list_vaccines' %}">Vacinas</a>
                             <a class="dropdown-item" href="{% url 'categories:list_categories' %}">Categorias</a>
                             <a class="dropdown-item" href="{% url 'posto:list_postos' %}">Postos</a>
+                            <a class="dropdown-item" href="{% url 'vaccinations:list_vaccinations' %}">Vacinação</a>
                         </div>
                     </li>
                 </ul>
@@ -103,18 +104,17 @@
             <div class="col-lg-4">
                 <span>🤷</span>
                 <h4>Sobre nós</h4>
-                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
-                    alteration in
-                    some form, by injected humour, or randomised words which don't look even believable.</p>
+                <p>O SuVApp é um sistema on-line de vacinação para registrar e monitorar a aplicação de vacinas no país.
+                    O sistema permite também controlar os estoques de vacinas, analisar as informações das diversas unidades
+                    de saúde responsáveis pela aplicação e disponibilizar uma caderneta de vacinação eletrônica.</p>
             </div>
             <!-- col-lg-4 -->
 
             <div class="col-lg-4">
                 <span>📇</span>
                 <h4>Contato</h4>
-                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
-                    alteration in
-                    some form, by injected humour, or randomised words which don't look even believable.</p>
+                <p>Disque saúde 136</p>
+                   Teleatendente de segunda-feira a sexta-feira, das 8h as 20h, e as sábados, das 8h as 18h.</p>
             </div>
             <!-- col-lg-4 -->
 
@@ -122,7 +122,7 @@
                 <span>🛑</span>
                 <h4>Sign in / Sign up</h4>
                 <p>Para fazer login no sistema, basta clicar no botão "Sign in" e caso seja o seu primeiro acesso,
-                    basta clicar no botão "Sign up" que você será redirecionado a página para cadastro de seus dados.
+                   basta clicar no botão "Sign up" que você será redirecionado a página para cadastro de seus dados.
                 </p>
                 <!-- botão de sign in -->
                 <button type="button" class="btn btn-dark"><a class="navbar-brand" href="{% url 'accounts:user_login' %}">Sign in</a></button>

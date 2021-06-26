@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'employees.apps.EmployeesConfig',
     'posto.apps.PostoConfig',
     'accounts.apps.AccountsConfig',
+    'vaccinations.apps.VaccinationsConfig',
 ]
 
 MIDDLEWARE = [
