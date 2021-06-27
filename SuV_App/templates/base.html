@@ -117,7 +117,8 @@
                    Teleatendente de segunda-feira a sexta-feira, das 8h as 20h, e as sábados, das 8h as 18h.</p>
             </div>
             <!-- col-lg-4 -->
-
+            {% if user.is_authenticated %}
+            {% else %}
             <div class="col-lg-4">
                 <span>🛑</span>
                 <h4>Sign in / Sign up</h4>
@@ -129,6 +130,7 @@
                 <!-- botão de sign up -->
                 <button type="button" class="btn btn-dark"><a class="navbar-brand" href="{% url 'accounts:add_user' %}">Sign up</a></button>
             </div>
+            {% endif %}
             <!-- col-lg-4 -->
         </div>
         <!-- row -->
