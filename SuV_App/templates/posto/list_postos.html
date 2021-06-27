@@ -35,12 +35,10 @@ Lista de Postos - {{ block.super }}
                         <td>{{ posto.posto_name }}</td>
                         <td>{{ posto.address }}</td>
                         <td>
-                            <a href="{% url 'posto:edit_posto' posto.id %}"
-                                class="btn btn-primary btn-sm">Editar</a>
+                            <a href="{% url 'posto:edit_posto' posto.id %}" class="btn btn-primary btn-sm">Editar</a>
                         </td>
                         <td>
-                            <a href="{% url 'posto:delete_posto' posto.id %}"
-                                class="btn btn-danger btn-sm ">Excluir</a>
+                            <a href="{% url 'posto:delete_posto' posto.id %}" class="btn btn-danger btn-sm ">Excluir</a>
                         </td>
                     </tr>
                     {% endfor %}
