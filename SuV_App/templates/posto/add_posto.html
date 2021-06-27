@@ -4,35 +4,35 @@
 
 {% block title %}
 
-    Adicionar Posto - {{ block.super }}
+Adicionar Posto - {{ block.super }}
 
 {% endblock title %}
 
 {% block body %}
 
-    <div class="container">
-        <br />
+<div class="container">
+    <br />
     <h5><b>Cadastro de Posto</b></h5>
-        <div class="row">
-            <div class ="col-md-12">
-                <form action="" method="POST">
+    <div class="row">
+        <div class="col-md-12">
+            <form action="" method="POST">
                 {% csrf_token %}
                 <div class="form-group">
-                   <label for="{{ form.posto_name.id_for_label }}">Nome Posto</label>
-                   {{ form.posto_name|add_class:"form-control" }}
+                    <label for="{{ form.posto_name.id_for_label }}">Nome Posto</label>
+                    {{ form.posto_name|add_class:"form-control" }}
                 </div>
                 <div class="form-group">
                     <label for="{{ form.address.id_for_label }}">Endereço</label>
                     {{ form.address|add_class:"form-control" }}
                 </div>
                 <div class="form-group">
-                  <label for="{{ form.cell_phone.id_for_label }}">Telefone</label>
-                  {{ form.cell_phone|add_class:"form-control" }}
+                    <label for="{{ form.cell_phone.id_for_label }}">Telefone</label>
+                    {{ form.cell_phone|add_class:"form-control" }}
                 </div>
-                    <button type="submit" class="btn btn-primary">Salvar</button>       
-                </form>
-            </div>
+                <button type="submit" class="btn btn-primary">Salvar</button>
+            </form>
         </div>
     </div>
+</div>
 
 {% endblock body %}
