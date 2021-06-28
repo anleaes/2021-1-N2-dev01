@@ -80,7 +80,7 @@
     <!-- FIM: Bloco do Bootstrap a ser incluido -->
 
     <!-- Inicio do bloco de front end página principal do sistema -->
-    
+
     <div id="headerwrap">
         <div class="container">
             <div class="row centered">
@@ -102,7 +102,8 @@
                 <span>🤷</span>
                 <h4>Sobre nós</h4>
                 <p>O SuVApp é um sistema on-line de vacinação para registrar e monitorar a aplicação de vacinas no país.
-                    O sistema permite também controlar os estoques de vacinas, analisar as informações das diversas unidades
+                    O sistema permite também controlar os estoques de vacinas, analisar as informações das diversas
+                    unidades
                     de saúde responsáveis pela aplicação e disponibilizar uma caderneta de vacinação eletrônica.</p>
             </div>
             <!-- col-lg-4 -->
@@ -116,6 +117,11 @@
             <!-- col-lg-4 -->
             <!-- esse if faz sumir o botão de login após logar -->
             {% if user.is_authenticated %}
+            <div class="col-lg-4">
+                <span>🛑</span>
+                <h4>Importante!</h4>
+                <p>Tomar vacinas é a melhor maneira de se proteger de uma variedade de doenças graves e de suas complicações, que podem até levar à morte.</p>
+            </div>
             {% else %}
             <div class="col-lg-4">
                 <span>🛑</span>
