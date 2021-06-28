@@ -22,7 +22,7 @@ def list_postos(request):
     template_name = 'posto/list_postos.html'
     postos = Posto.objects.filter()
     context = {
-        'postos': postos,
+        'posto': postos
     }
     return render(request, template_name, context)
 
@@ -34,7 +34,7 @@ def edit_posto(request, id_posto):
         form = PostoForm(request.POST, instance=posto)
         if form.is_valid():
             form.save()
-            return redirect('postos:list_postos')
+            return redirect('posto:list_postos')
     form = PostoForm(instance=posto)
     context['form'] = form
     return render(request, template_name, context)
