@@ -23,6 +23,7 @@ Lista de Vacinações - {{ block.super }}
                         <th scope="col">#</th>
                         <th scope="col">Paciente</th>
                         <th scope="col">Vacina</th>
+                        <th scope="col">Outras Vacinas</th>
                         <th scope="col">Posto</th>
                         <th scope="col">Funcionário</th>
                         <th scope="col"></th>
@@ -34,6 +35,7 @@ Lista de Vacinações - {{ block.super }}
                     <tr>
                         <th scope="row">{{ vaccination.id }}</th>
                         <td>{{ vaccination.patient }}</td>
+                        <td>{{ vaccination.vaccine }}</td>
                         <td>{{ vaccination.vaccine }}</td>
                         <td>{{ vaccination.posto }}</td>
                         <td>{{ vaccination.employee }}</td>
