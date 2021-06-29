@@ -56,9 +56,7 @@ def delete_vaccination(request, id_vaccination):
     return redirect('vaccinations:list_vaccinations')
 
 #Lista nova vacinação
-'''CRIAR AQUI A FUNÇÃO DO STATUS E DEPOIS CHAMAR ELA NO HTML'''
-'''SE PAH TEM QUE CRIAR OUTRA LIST_VACCINATION PARA MOSTRAR A ATUALIZADA'''
-
+@login_required(login_url='/contas/login/')
 def edit_vaccination_status(request, id_vaccination):
     template_name = 'vaccinations/status_vaccination.html'
     context ={}
@@ -79,7 +77,7 @@ def edit_vaccination_status(request, id_vaccination):
 #Lista vacinação status
 @login_required(login_url='/contas/login/')
 def list_vaccinations_status(request):
-    template_name = 'vaccinations/list_vaccinations_status.html'
+    template_name = 'vaccinations/list_vaccinations.html'
     vaccinations = Vaccination.objects.filter()
     context = {
         'vaccinations': vaccinations
